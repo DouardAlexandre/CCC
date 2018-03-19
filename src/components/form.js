@@ -104,6 +104,11 @@ class ControlledInput extends Component {
     this.setState({ documents });
     this.state.crypto.pop()
     this.state.cryptoNum.pop()
+    var total = 0;
+    for (var i=0; i < this.state.crypto.length; i++) {
+      total  += (this.state.crypto[i] * this.state.cryptoNum[i]);
+    }
+    this.setState({ total: total });
   }
 
     render () {
