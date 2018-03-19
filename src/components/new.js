@@ -22,7 +22,7 @@ class NewInput extends Component {
                 max={10}
                 multiple={false} 
                 onChange={this.props.change} />
-              <i className="far fa-angle-down">
+              <i className="far fa-angle-down"></i>
               <div className="aff">{this.props.$+" "+this.props.devise}</div>
             </div>
 	    );
