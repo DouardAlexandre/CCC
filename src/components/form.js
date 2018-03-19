@@ -143,7 +143,6 @@ class ControlledInput extends Component {
 		        search={false}
 		        ref="ChangeValue"
 		        onChange={this.selectChange} />
-          <i className="far fa-angle-down"></i>
     	  </div>
         
         { documents }
