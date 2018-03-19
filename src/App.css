@@ -68,6 +68,7 @@ h3{
   height: 25rem */
 
 }
+
 .change_coin {
   
   font-family: Raleway;
@@ -80,7 +81,9 @@ h3{
  
    
 }
-
+.header{
+  color:#95afc0;
+}
 .App-footer {
   color:white;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3), 0 0 25px 0 rgba(0, 0, 0, 0.15); 
