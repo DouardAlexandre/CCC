@@ -18,7 +18,7 @@ class App extends Component {
         </header>
 
         <div className="photo_header"></div>
-          <div className="change_coin"><ControlledInput /><i class="far fa-angle-down"></i></div>
+          <div className="change_coin"><ControlledInput /><i className="far fa-angle-down"></i></div>
         
 
         <footer className="App-footer"> {time} </footer>
