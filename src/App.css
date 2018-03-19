@@ -5,9 +5,8 @@
   font-family: 'fontawesome', sans-serif;
 } */
 .App {
- 
- /*  background-color: #F2F2F0;  */
-  background-color: red; 
+
+  background-color: white; 
   overflow: hidden;
   text-align: center;
   height: 100vh;
