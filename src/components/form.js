@@ -135,7 +135,7 @@ class ControlledInput extends Component {
     return (
     	<div>
     	  <div className="header">
-	    	<SelectSearch
+	    	  <SelectSearch
 		        name="change"
 		        value='USD' 
 		        multiple={false}
@@ -143,8 +143,9 @@ class ControlledInput extends Component {
 		        search={false}
 		        ref="ChangeValue"
 		        onChange={this.selectChange} />
+          <i className="far fa-angle-down"></i>
     	  </div>
-        <i className="far fa-angle-down">
+        
         { documents }
         <div className="buttons">
         {/*  <button onClick={ this.add }><img src={plus} alt="plus"  /></button>*/}
