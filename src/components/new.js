@@ -15,14 +15,18 @@ class NewInput extends Component {
                 min="0" 
                 ref={this.props.number}
                 onChange={this.props.inputChange} 
-                type="number" />
+                type="number"
+                defaultValue="1" />
               <SelectSearch
                 mode="input"
                 options={this.props.options}
                 max={10}
                 multiple={false} 
-                onChange={this.props.change} />
+                onChange={this.props.change}
+                
+                 />
               <div className="aff">{this.props.$+" "+this.props.devise}</div>
+
             </div>
 	    );
 	  }

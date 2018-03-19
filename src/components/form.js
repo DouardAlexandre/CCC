@@ -23,7 +23,10 @@ class ControlledInput extends Component {
   } 
    
   componentWillMount(){
- 
+
+  console.log(this.state.cryptoNum)
+     console.log(this.state.crypto)
+
      let Url= 'https://api.coinmarketcap.com/v1/ticker/?limit=0';
       fetch(Url,{mode:'cors', method:'GET'})
       .then( res => res.json())
@@ -54,15 +57,20 @@ class ControlledInput extends Component {
      var cryptoNum = this.state.cryptoNum   
      var number = event.target.value
      var crypto = this.state.crypto
-	 cryptoNum.splice(key,1,number)
-	 this.setState({ cryptoNum })
-	 var total = 0;
+	   cryptoNum.splice(key,1,number)
+
+	   this.setState({ cryptoNum })
+
+	   var total = 0;
+
      for (var i=0; i < cryptoNum.length; i++) {
      	total  += (crypto[i] * cryptoNum[i]);
      }
+
      if(cryptoNum.length === crypto.length){
         this.setState({ total: total });
      }
+     console.log(this.oneInput.value)
   }
 
   // select cryptomoney
@@ -78,12 +86,17 @@ class ControlledInput extends Component {
     }
      if(cryptoNum.length === crypto.length){
         this.setState({ total: total });
+        console.log("eeeeeeeeeeeeeeeeee")
      }
+     console.log(cryptoNum)
+     console.log(crypto)
   }
 
     add() {
     const documents = this.state.documents.concat(NewInput);
     this.setState({ documents });
+    this.state.cryptoNum.push("1")
+    this.state.crypto.push("0")
   }
 
   remove() {
@@ -91,11 +104,6 @@ class ControlledInput extends Component {
     this.setState({ documents });
     this.state.crypto.pop()
     this.state.cryptoNum.pop()
-    var total = 0;
-    for (var i=0; i < this.state.crypto.length; i++) {
-      total  += (this.state.crypto[i] * this.state.cryptoNum[i]);
-    }
-    this.setState({ total: total });
   }
 
     render () {
@@ -114,7 +122,7 @@ class ControlledInput extends Component {
             }else{
             	 price = <p className="price">={" "+0+" "+this.state.changeValue}</p>;
             }
-
+        
         const documents = this.state.documents.map((Element, index) => {
         return <Element 
         key={ index } 
@@ -141,7 +149,6 @@ class ControlledInput extends Component {
 		        multiple={false}
 		        options={options} 
 		        search={false}
-		        ref="ChangeValue"
 		        onChange={this.selectChange} />
     	  </div>
         
