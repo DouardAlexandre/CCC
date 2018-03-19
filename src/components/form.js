@@ -144,18 +144,19 @@ class ControlledInput extends Component {
 		        ref="ChangeValue"
 		        onChange={this.selectChange} />
     	  </div>
-          { documents }
-          <div className="buttons">
-          {/*  <button onClick={ this.add }><img src={plus} alt="plus"  /></button>*/}
-          {moins}
-          <button onClick={ this.add }>+</button>
+        <i className="far fa-angle-down">
+        { documents }
+        <div className="buttons">
+        {/*  <button onClick={ this.add }><img src={plus} alt="plus"  /></button>*/}
+        {moins}
+        <button onClick={ this.add }>+</button>
             
-          </div>
-      
-          <div className="resultat" >
-            <div className="price_aff">{price}</div>
-          </div>
         </div>
+      
+        <div className="resultat" >
+          <div className="price_aff">{price}</div>
+        </div>
+      </div>
     );
   }
 
