@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import ControlledInput from './components/form.js';
-
+import ReactGA from 'react-ga';
 
 
 class App extends Component {
+   constructor() {
+    // Add your tracking ID created from https://analytics.google.com/analytics/web/#home/
+    ReactGA.initialize('UA-116111650-1');
+    // This just needs to be called once since we have no routes in this case.
+    ReactGA.pageview(window.location.pathname);
+  }
   render() {
             var today = new Date(),
             time = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear()+ '    ' + today.getHours()+ ':' + today.getMinutes();
