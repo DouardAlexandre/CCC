@@ -8,7 +8,7 @@ class NewInput extends Component {
 
 	    return (
             <div className="firstLine" >
-
+             {this.props.plus}
               <input 
                 id={ this.props.index }
                 pattern="[0-9.,]+" 

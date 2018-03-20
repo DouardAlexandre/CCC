@@ -24,9 +24,6 @@ class ControlledInput extends Component {
    
   componentWillMount(){
 
-  console.log(this.state.cryptoNum)
-     console.log(this.state.crypto)
-
      let Url= 'https://api.coinmarketcap.com/v1/ticker/?limit=0';
       fetch(Url,{mode:'cors', method:'GET'})
       .then( res => res.json())
@@ -70,7 +67,6 @@ class ControlledInput extends Component {
      if(cryptoNum.length === crypto.length){
         this.setState({ total: total });
      }
-     console.log(this.oneInput.value)
   }
 
   // select cryptomoney
@@ -86,10 +82,7 @@ class ControlledInput extends Component {
     }
      if(cryptoNum.length === crypto.length){
         this.setState({ total: total });
-        console.log("eeeeeeeeeeeeeeeeee")
      }
-     console.log(cryptoNum)
-     console.log(crypto)
   }
 
     add() {
@@ -127,7 +120,13 @@ class ControlledInput extends Component {
             }else{
             	 price = <p className="price">={" "+0+" "+this.state.changeValue}</p>;
             }
+
+        if(this.state.documents.length>1){
+          var addition =  <div className="addition">+</div> ;
+        }
+      
         
+
         const documents = this.state.documents.map((Element, index) => {
         return <Element 
         key={ index } 
@@ -137,17 +136,22 @@ class ControlledInput extends Component {
         options={ currencyOptions } 
         change={ this.onChange.bind(this, index) } 
         inputChange={ this.handleChange.bind(this) }
-        devise= {this.state.changeValue} />
+        devise= {this.state.changeValue}
+        plus={addition}/>
       });
 
       if(this.state.documents.length>1){
      //var moins = <button onClick={ this.remove }><img src={minus} alt="minus"  /></button>;
      var moins = <button onClick={ this.remove }>-</button>;
    }
-
+     if(this.state.documents.length<2){
+     var add =  <p className="newCrypto">Add</p> ;
+     }
+     
     return (
-    	<div>
+    	<div className="find">
     	  <div className="header">
+
 	    	  <SelectSearch
 		        name="change"
 		        value='USD' 
@@ -155,19 +159,23 @@ class ControlledInput extends Component {
 		        options={options} 
 		        search={false}
 		        onChange={this.selectChange} />
+
     	  </div>
         
         { documents }
+    
         <div className="buttons">
-        {/*  <button onClick={ this.add }><img src={plus} alt="plus"  /></button>*/}
-        {moins}
-        <button onClick={ this.add }>+</button>
-            
+
+          {add}
+           {moins}
+          <button onClick={ this.add }>+</button>
+
         </div>
       
         <div className="resultat" >
           <div className="price_aff">{price}</div>
         </div>
+
       </div>
     );
   }
