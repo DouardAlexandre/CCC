@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SelectSearch from 'react-select-search';
+/*import $ from 'jquery'; */
 
 
 class NewInput extends Component {
@@ -8,7 +9,7 @@ class NewInput extends Component {
 
 	    return (
             <div className="firstLine" >
-             {this.props.plus}
+              {this.props.plus}
               <input 
                 id={ this.props.index }
                 pattern="[0-9.,]+" 
@@ -17,14 +18,19 @@ class NewInput extends Component {
                 onChange={this.props.inputChange} 
                 type="number"
                 defaultValue="1" />
-              <SelectSearch
-                mode="input"
-                options={this.props.options}
-                max={10}
-                multiple={false} 
-                onChange={this.props.change}
-                
-                 />
+
+       
+
+                <SelectSearch
+                  mode="input"
+                  options={this.props.options}
+                  max={10}
+                  multiple={false} 
+                  onChange={this.props.change}
+                />
+
+           
+
               <div className="aff">{this.props.$+" "+this.props.devise}</div>
 
             </div>

@@ -1,9 +1,7 @@
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
 import SelectSearch from 'react-select-search';
 import NewInput from './new';
-
-
 
 class ControlledInput extends Component {
   constructor (props) {
@@ -23,6 +21,8 @@ class ControlledInput extends Component {
   } 
    
   componentWillMount(){
+
+    
 
      let Url= 'https://api.coinmarketcap.com/v1/ticker/?limit=0';
       fetch(Url,{mode:'cors', method:'GET'})
