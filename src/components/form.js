@@ -115,10 +115,10 @@ class ControlledInput extends Component {
         //selectSearch options
         var currencyOptions = this.state.data;
         if(this.state.crypto.length>0){
-                var price = <p className="price"> = {
+                var price = <p className="price"> {
                 	" "+this.state.total*this.state.currentChangeId+" "+this.state.changeValue}</p>;
             }else{
-            	 price = <p className="price">={" "+0+" "+this.state.changeValue}</p>;
+            	 price = <p className="price">{" "+0+" "+this.state.changeValue}</p>;
             }
 
         if(this.state.documents.length>1){
@@ -166,7 +166,7 @@ class ControlledInput extends Component {
     
         <div className="buttons">
 
-          {add}
+           {add}
            {moins}
           <button onClick={ this.add }>+</button>
 

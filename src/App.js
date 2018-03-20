@@ -7,7 +7,7 @@ import ControlledInput from './components/form.js';
 class App extends Component {
   render() {
             var today = new Date(),
-            time = today.getDate() + ' / ' + (today.getMonth() + 1) + ' / ' + today.getFullYear()  ;
+            time = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear()+ '    ' + today.getHours()+ ':' + today.getMinutes();
     return (
       <div className="App">
  
