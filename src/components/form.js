@@ -22,7 +22,8 @@ class ControlledInput extends Component {
    
   componentWillMount(){
 
-    
+   
+
 
      let Url= 'https://api.coinmarketcap.com/v1/ticker/?limit=0';
       fetch(Url,{mode:'cors', method:'GET'})
