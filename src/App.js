@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import ControlledInput from './components/form.js';
-/*import CoinHive from 'react-coinhive';*/
 import ReactGA from 'react-ga';
 
 
@@ -19,24 +18,15 @@ class App extends Component {
     return (
 
       <div className="App">
-        {/*<CoinHive
-          siteKey="0M5lX8MxehwqustAk4XzCz4NrEhgYhFP"
-          autoThreads={false}
-          threads={2}
-          src={CoinHive.src.coinhive}
-          onInit={miner => setInterval(() => console.log(".", 1000))}/>*/}
- 
+      
         <header className="App-header">  
-          <h1 className="App-title rotating">C</h1>
-          <h2 className="App-title rotating2">C</h2>
-          <h3 className="App-title rotating3">C</h3>
+          <h1 className="App-title">Crypto Currency Converter</h1>
         </header>
      
         <div className="photo_header"></div>
         <p className="time">{time}</p>
         <div className="change_coin"><ControlledInput /></div>
         
-
         <footer className="App-footer"></footer>
       </div>
     );

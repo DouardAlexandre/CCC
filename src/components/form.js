@@ -123,8 +123,6 @@ class ControlledInput extends Component {
           var addition =  <div className="addition">+</div> ;
         }
       
-        
-
         const documents = this.state.documents.map((Element, index) => {
         return <Element 
         key={ index } 
@@ -148,6 +146,7 @@ class ControlledInput extends Component {
      
     return (
     	<div className="find">
+
     	  <div className="header">
 
 	    	  <SelectSearch
@@ -162,15 +161,13 @@ class ControlledInput extends Component {
         
         { documents }
     
-        <div className="buttons">
-
-           {add}
-           {moins}
+        <div className="sum">
+          {add}
+          {moins}
           <button onClick={ this.add }>+</button>
-
         </div>
-      
-        <div className="resultat" >
+
+        <div className="rez">
           <div className="price_aff">{price}</div>
         </div>
 
