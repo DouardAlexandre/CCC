@@ -47,7 +47,7 @@ class ControlledInput extends Component {
      });}
   //inputs
   handleChange (event) {
-        
+        console.log(this.state.data)
      var key = event.target.id 
      var cryptoNum = this.state.cryptoNum   
      var number = event.target.value
@@ -91,6 +91,12 @@ class ControlledInput extends Component {
   }
 
   remove() {
+    if(this.state.documents.length===2){
+        var btn = document.getElementById("btn_pl");
+        btn.style.marginRight= "4px";
+        btn.style.marginLeft= "36px";
+    }
+
     const documents = this.state.documents.slice(0, -1);
     this.setState({ documents });
     this.state.crypto.pop()
@@ -100,6 +106,7 @@ class ControlledInput extends Component {
       total  += (this.state.crypto[i] * this.state.cryptoNum[i]);
     }
     this.setState({ total: total });
+    
   }
 
     render () {
@@ -113,16 +120,14 @@ class ControlledInput extends Component {
         //selectSearch options
         var currencyOptions = this.state.data;
         if(this.state.crypto.length>0){
-                var price = <p className="price"> {
-                	" "+this.state.total*this.state.currentChangeId+" "+this.state.changeValue}</p>;
-            }else{
-            	 price = <p className="price">{" "+0+" "+this.state.changeValue}</p>;
-            }
-
-        if(this.state.documents.length>1){
-          var addition =  <div className="addition">+</div> ;
+          var price = <p className="price"> 
+          { " "+this.state.total*this.state.currentChangeId+" "+this.state.changeValue}</p>;
+        }else{
+          price = <p className="price">{" "+0+" "+this.state.changeValue}</p>;
         }
-      
+
+        var addition =  <div className="addition">+</div> ;
+
         const documents = this.state.documents.map((Element, index) => {
         return <Element 
         key={ index } 
@@ -135,17 +140,46 @@ class ControlledInput extends Component {
         devise= {this.state.changeValue}
         plus={addition}/>
       });
-
+      
       if(this.state.documents.length>1){
-     //var moins = <button onClick={ this.remove }><img src={minus} alt="minus"  /></button>;
-     var moins = <button onClick={ this.remove }>-</button>;
-   }
-     if(this.state.documents.length<2){
-     var add =  <p className="newCrypto">Add</p> ;
-     }
+        var moins = <button id="btn_mo" onClick={ this.remove }>-</button>;
+        var btn = document.getElementById("btn_pl");
+        btn.style.marginRight= "40px";
+        btn.style.marginLeft= "0px";
+      }
+
+      if(this.state.documents.length<2){
+        var add =  <p className="newCrypto">Add</p>;
+       
+      }
+
+   /*  var rand = Math.floor((Math.random() * 100) + 1);*/
+
+    /* banner anim*/
+    /* var prices = [];
+     this.state.data.forEach(
+      (obj) => prices.push(
+        obj.symbol+" "+obj.percent_change_1h+" "
+      )
+     );*/
      
+    /* document.addEventListener("DOMContentLoaded", function(){
+       
+         var elem = document.getElementById("moov");
+         var pos = 0;
+         var id = setInterval(animate, 100);
+         function animate() {
+            pos++; 
+            elem.style.left = pos + 'px';
+         }
+     });*/
+    
+     
+
     return (
     	<div className="find">
+
+       {/* <div className="slideshow"><div id="moov">{prices}</div></div>*/}
 
     	  <div className="header">
 
@@ -164,7 +198,7 @@ class ControlledInput extends Component {
         <div className="sum">
           {add}
           {moins}
-          <button onClick={ this.add }>+</button>
+          <button id="btn_pl" onClick={ this.add }>+</button>
         </div>
 
         <div className="rez">

@@ -56,6 +56,7 @@ h1{
 body{ 
   display:flex; 
   flex-direction:column; 
+
 }
 /* .App-footer {
   position: absolute;
@@ -359,6 +360,7 @@ ul.select-search-box__options {
    height: 2.7rem;
 }
 .firstLine{
+
   display: flex;   
   background-color: white ;   
  /*  border-bottom: #5D6D7E dotted 1px;   */
@@ -408,16 +410,16 @@ ul.select-search-box__options {
   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3); 
   font-size: 1.3rem;
   height: 40px;
-  margin-right: 15.5rem;
+  margin-right: 13.2rem;
   margin-bottom: 4rem;
-  width: 17rem;
+  width: 17.5rem;
 }
 .price_aff:after{
   content: "=";
   position: absolute;
   color:#1289A7;
   font-size: 3rem;
-  margin-left: -12.8rem;
+  margin-left: -10.7rem;
   margin-top: -2.8rem;
 }
 .time{
@@ -438,14 +440,15 @@ ul.select-search-box__options {
   margin-bottom: 1rem;
 }
 button{
-  margin-right: 5px;
-  margin-left: -2px;
+  margin-right: 4px;
+  margin-left: 36px;
   background-color: #1289A7;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   outline: none;
   border: none;
   width: 2rem;
+  min-width: 2rem;
   height: 2rem;
   color: white;
   font-size: 1.5rem;
@@ -456,7 +459,7 @@ button{
   .newCrypto{
   position: absolute;
   font-size: 16px;
-  margin-left: 2rem;
+  margin-left: 3.9rem;
   margin-top: .5rem;
   color:#1289A7;
   }
@@ -464,18 +467,35 @@ button{
   .addition{
    color:#1289A7;
    font-size: 3rem;
-   position: absolute;
-   z-index: 2;
-   margin-top: -.5rem;
-   margin-left:-20rem;
+   height: 40px;
+   line-height: 40px;
+   margin-right:10px; 
+   margin-left:10px;
   }
-
+ .slideshow{
+  list-style: none;
+  position: relative;
+  font-size: .8rem;
+  height: 2rem;
+  width: 5000%;
+  line-height: 2rem;
+  /* overflow: hidden; */
+  /* white-space: nowrap; */
+ }
+ #moov{
+  display: inline-flex;
+  height: 2rem;
+  position: absolute;
+ 
+ }
+ 
 /* -------------media query--------------------*/
 
-/*  de 400 a 800  */
+/*  before  800  */
 @media (max-width: 800px) {
+
   .header > .select-search-box{
-    margin-right:2rem;
+    margin-right:4rem;
   }
   .firstLine{
     flex-wrap: wrap; 
@@ -486,22 +506,32 @@ button{
     align-items: center; 
     font-size: 1.2rem;
     flex-basis: 100%;
-    margin-top: -.4rem;
   }
-  .buttons{
-   margin-bottom: 3rem;
+  .sum{
+  display: flex;
+  flex-direction: row;     
+  justify-content: center; 
+  background-color: white;
+  padding: 0;
+  height: 2rem;
+  margin-bottom: 1rem;
   }
-  .addition{
-   position: absolute;
-   z-index: 2;
-   margin-top: -1rem;
-   margin-left: -10rem;
+  button{
+    margin-right: 4px;
+    margin-left: 288px;
+    margin-top: 6px;  
+  }
+  #btn_mo{
+    
+  }
+  #btn_pl{
+   
   }
   .price_aff{
-   margin-right: 0rem;  
+   margin-right: -2rem;  
   }
   .price_aff:after{
-  margin-left: -10.5rem;
+  margin-left: -10.4rem;
 }
  }
 
