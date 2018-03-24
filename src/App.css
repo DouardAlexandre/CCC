@@ -35,22 +35,23 @@
    width: 100%;
 } 
 h1{
-  margin:0;
+  margin-left:180px;
+  text-align: left;
   font-weight: 300;
+  margin-top: 0;
 }
 .photo_header{
   background-image: url(./img/fond.jpg);
   background-repeat: no-repeat;  
   background-size: cover;
   width:100%;
-  height: 5rem
+  height: 5rem;
 }
 .change_coin {
   font-family: Raleway;
-  /*  background-color: #37353a;  */
-  /*   background-color:red;  */ 
   width:100%;
   color:#95afc0;
+  
 }
 
 body{ 
@@ -363,7 +364,6 @@ ul.select-search-box__options {
 
   display: flex;   
   background-color: white ;   
- /*  border-bottom: #5D6D7E dotted 1px;   */
   justify-content: center;
   align-content: center; 
   height: 3.3rem;
@@ -422,13 +422,7 @@ ul.select-search-box__options {
   margin-left: -10.7rem;
   margin-top: -2.8rem;
 }
-.time{
-   position: absolute;
-   color:#1289A7;
-   display: flex;
-   margin-left: 2rem;
-   font-size: .9rem;
-}
+
 /*  ligne buttons */
 .sum{
   display: flex;
@@ -439,7 +433,7 @@ ul.select-search-box__options {
   height: 2rem;
   margin-bottom: 1rem;
 }
-button{
+button#btn_mo,button#btn_pl{
   margin-right: 4px;
   margin-left: 36px;
   background-color: #1289A7;
@@ -472,6 +466,7 @@ button{
    margin-right:10px; 
    margin-left:10px;
   }
+  /*animation test*/
  .slideshow{
   list-style: none;
   position: relative;
@@ -486,14 +481,77 @@ button{
   display: inline-flex;
   height: 2rem;
   position: absolute;
- 
  }
- 
+ /* -----------------------------------------------*/
+
+.aside{
+  /* background-image: url(./img/square.png);
+  background-repeat: repeat; */
+  position: absolute;
+  box-sizing: border-box;
+  padding: 24px;
+  line-height: 20px;
+  width: 180px;
+  height: 84.5%;
+  background-color: #1289A7;
+  left: 0;
+  top:144px;
+  padding-top: 20px;
+  font-size: .9rem;
+  color: white;
+  /*  box-shadow: 2px 0 16px 0 rgba(0, 0, 0, 0.9), 0 0 25px 0 rgba(0, 0, 0, 0.5);
+   box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.3), 0 0 25px 0 rgba(0, 0, 0, 0.15);   */
+}
+
+.aside_a{
+  color:white;
+}
+.logo{
+  width: 180px;
+  height: 64px;
+  background-color: #1289A7;
+  position: absolute;
+  top:0;
+  left:0;
+  box-shadow: 2px 0 16px 0 rgba(0, 0, 0, 0.9), 0 0 25px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.3), 0 0 25px 0 rgba(0, 0, 0, 0.15);  
+
+}
+/*---------------donate adress----------------*/
+.separateur{
+  margin-top: 5rem;
+}
+.adress{
+  font-size: .6rem;
+}
+#to-copy_BTC,#to-copy_ETH,#to-copy_LTC{
+  position: absolute;
+}
+#copy_BTC,#copy_ETH,#copy_LTC{
+  background-color:white;
+  margin-bottom: 1rem;
+
+  height:1.4rem;
+}
+
+
+
+
+
+
 /* -------------media query--------------------*/
 
-/*  before  800  */
-@media (max-width: 800px) {
-
+/*  before  920  */
+@media (max-width: 920px) {
+ .aside{
+   display:none;
+  }
+  .logo{
+    display:none;
+  }
+  h1{
+    margin-left:60px;
+  }
   .header > .select-search-box{
     margin-right:4rem;
   }
@@ -507,25 +565,10 @@ button{
     font-size: 1.2rem;
     flex-basis: 100%;
   }
-  .sum{
-  display: flex;
-  flex-direction: row;     
-  justify-content: center; 
-  background-color: white;
-  padding: 0;
-  height: 2rem;
-  margin-bottom: 1rem;
-  }
-  button{
+  button#btn_pl,button#btn_mo{
     margin-right: 4px;
     margin-left: 288px;
     margin-top: 6px;  
-  }
-  #btn_mo{
-    
-  }
-  #btn_pl{
-   
   }
   .price_aff{
    margin-right: -2rem;  
@@ -535,8 +578,8 @@ button{
 }
  }
 
- /*  a partir de 800  */
- @media (min-width: 800px) {
+ /*  a partir de 920  */
+ @media (min-width: 920px) {
  
  .header > .select-search-box{
   padding-left: 0;

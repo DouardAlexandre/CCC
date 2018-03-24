@@ -163,16 +163,39 @@ class ControlledInput extends Component {
       )
      );*/
      
-    /* document.addEventListener("DOMContentLoaded", function(){
-       
-         var elem = document.getElementById("moov");
+      document.addEventListener("DOMContentLoaded", function(){
+         var toCopy_BTC  = document.getElementById( 'to-copy_BTC'),
+         btnCopy_BTC = document.getElementById('copy_BTC');
+         toCopy_BTC.style.opacity = 0;
+         btnCopy_BTC.addEventListener( 'click', function(){
+           toCopy_BTC.select();
+           document.execCommand('copy');
+           return false;
+         });  
+         var toCopy_ETH  = document.getElementById( 'to-copy_ETH'),
+         btnCopy_ETH = document.getElementById('copy_ETH');
+         toCopy_ETH.style.opacity = 0;
+         btnCopy_ETH.addEventListener( 'click', function(){
+           toCopy_ETH.select();
+           document.execCommand('copy');
+           return false;
+         });  
+         var toCopy_LTC  = document.getElementById( 'to-copy_LTC'),
+         btnCopy_LTC = document.getElementById('copy_LTC');
+         toCopy_LTC.style.opacity = 0;
+         btnCopy_LTC.addEventListener( 'click', function(){
+           toCopy_LTC.select();
+           document.execCommand('copy');
+           return false;
+         });  
+         /*var elem = document.getElementById("moov");
          var pos = 0;
          var id = setInterval(animate, 100);
          function animate() {
             pos++; 
             elem.style.left = pos + 'px';
-         }
-     });*/
+         }*/
+     });
     
      
 
