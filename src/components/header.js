@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import logo from '../img/logo.png';
 class Header extends Component {
 
 	render(){
@@ -7,7 +7,7 @@ class Header extends Component {
 	  return (
         <div>
 	       <header className="App-header">
-             <div className="logo"></div>  
+             <div className="logo"> <img className="logo_img" src={logo} alt={"logo"}/> </div>  
              <h1 className="App-title">Crypto Currency Converter</h1>
            </header>
      

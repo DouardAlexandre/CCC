@@ -14,13 +14,17 @@ class Aside extends Component {
   
 	    return (
 	        <div className="aside">
+        
+            <p>Data from<br/> 
+              <a className="aside_a" href="https://coinmarketcap.com/">
+              <strong>Coinmarketcap</strong><br/></a>
+              <em>updates every 5 minutes</em><br/>&<br/>
+              <a className="aside_a" href="https://fixer.io/"><strong>Fixer</strong><br/></a>
+              <em>updates every 60 seconds.</em>
+            </p>
             <p></p>
-            <p>Data from <a className="aside_a" href="https://coinmarketcap.com/">Coinmarketcap</a></p>
-            <p>updates every 5 minutes</p>
-            <p>&</p>
-            <p><a className="aside_a" href="https://fixer.io/">Fixer</a></p>
-            <p>updates every 60 seconds.</p>
-            <p>No database nothing is save online.</p>
+            <p></p>
+            <p><strong>No database</strong> nothing is save online.</p>
             <p>Save locally with localStorage:</p>
 
             <Settings

@@ -20,7 +20,8 @@ class Settings extends Component {
                    setup.coins['value'+i]=inputNum[i];
                    setup.values['coin'+i]=inputCoin[i];
                 }
-              localStorage.setItem('set',JSON.stringify(setup));
+                 var values = JSON.stringify(setup);
+              localStorage.setItem('set',values);
               /*alert("Mémorisation effectuée");*/
           } /*else alert("localStorage n'est pas supporté");*/
      }
