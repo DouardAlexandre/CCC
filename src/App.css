@@ -466,22 +466,7 @@ button#btn_mo,button#btn_pl{
    margin-right:10px; 
    margin-left:10px;
   }
-  /*animation test*/
- .slideshow{
-  list-style: none;
-  position: relative;
-  font-size: .8rem;
-  height: 2rem;
-  width: 5000%;
-  line-height: 2rem;
-  /* overflow: hidden; */
-  /* white-space: nowrap; */
- }
- #moov{
-  display: inline-flex;
-  height: 2rem;
-  position: absolute;
- }
+ 
  /* -----------------------------------------------*/
 
 .aside{
@@ -519,7 +504,7 @@ button#btn_mo,button#btn_pl{
 }
 /*---------------donate adress----------------*/
 .separateur{
-  margin-top: 5rem;
+  margin-top: .5rem;
 }
 .adress{
   font-size: .6rem;
@@ -530,8 +515,16 @@ button#btn_mo,button#btn_pl{
 #copy_BTC,#copy_ETH,#copy_LTC{
   background-color:white;
   margin-bottom: 1rem;
-
   height:1.4rem;
+
+  cursor: pointer;
+}
+#reset,#stockage,#lecture{
+  height:1.4rem;
+  margin-bottom: 1rem;
+  line-height :1.4rem;
+  cursor: pointer;
+  width:118px;
 }
 
 

@@ -19,17 +19,13 @@ class NewInput extends Component {
                 type="number"
                 defaultValue="1" />
 
-       
-
                 <SelectSearch
+                  name={ this.props.id }
                   mode="input"
                   options={this.props.options}
-                  max={10}
                   multiple={false} 
                   onChange={this.props.change}
                 />
-
-           
 
               <div className="aff">{this.props.$+" "+this.props.devise}</div>
 
